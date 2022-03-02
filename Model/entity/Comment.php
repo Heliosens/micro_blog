@@ -6,8 +6,8 @@ class Comment
 {
     private int $id;
     private string $content;
-    private int $user_fk;
-    private int $article_fk;
+    private User $author;
+    private Article $article;
 
     /**
      * @return int
@@ -42,35 +42,35 @@ class Comment
     }
 
     /**
-     * @return int
+     * @return User
      */
-    public function getUserFk(): int
+    public function getAuthor(): User
     {
-        return $this->user_fk;
+        return $this->author;
     }
 
     /**
-     * @param int $user_fk
+     * @param User $author
      */
-    public function setUserFk(int $user_fk): void
+    public function setAuthor(User $author): void
     {
-        $this->user_fk = $user_fk;
+        $this->author = $author;
     }
 
     /**
-     * @return int
+     * @return Article
      */
-    public function getArticleFk(): int
+    public function getArticle(): Article
     {
-        return $this->article_fk;
+        return $this->article;
     }
 
     /**
-     * @param int $article_fk
+     * @param Article $article
      */
-    public function setArticleFk(int $article_fk): void
+    public function setArticle(Article $article): void
     {
-        $this->article_fk = $article_fk;
+        $this->article = $article;
     }
 
 
