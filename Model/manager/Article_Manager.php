@@ -17,9 +17,9 @@ class Article_Manager
             $format = 'Y-m-d H:i:s';
 
             foreach ($query->fetchAll() as $articleData){
-                $article[] = (new Article())
+                $articles[] = (new Article())
                     ->setId($articleData['id'])
-                    ->setAuthor($userManager->getUserById($articleData['author']))
+                    ->setAuthor($userManager->getUserById($articleData['user_fk']))
                     ->setContent($articleData['content'])
                     ->setDateAdd(DateTime::createFromFormat($format, $articleData['date_add']))
                     ->setDateUpdate(DateTime::createFromFormat($format, $articleData['date_update']))
