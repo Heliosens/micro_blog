@@ -5,7 +5,7 @@ namespace App\Model\manager;
 use App\Model\DB;
 use App\Model\entity\User;
 
-class userManager
+class UserManager
 {
     public function getUserById ($id) :User {
         $query = DB::getPDO()->query("SELECT * FROM user WHERE id = $id");
