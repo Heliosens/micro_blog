@@ -29,4 +29,22 @@ class Article_Manager
         }
         return $articles;
     }
+
+    public function getArticleById($id) :Article
+    {
+        $query = DB::getPDO()->query("SELECT * FROM article WHERE id = $id");
+        $article = new Article();
+        $format = 'Y-m-d H:i:s';
+        if($query){
+            $userManager = new UserManager();
+            $data = $query->fetch();
+            $article->setId($id);
+            $article->setTitle($data['title']);
+            $article->setContent($data['content']);
+            $article->setDateAdd(DateTime::createFromFormat($format, $data['date_add']));
+            $article->setDateUpdate(DateTime::createFromFormat($format, $data['date_update']));
+            $article->setAuthor($userManager->getUserById($data['user_fk']));
+        }
+        return $article;
+    }
 }
