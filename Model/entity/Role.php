@@ -18,9 +18,10 @@ class Role
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(int $id): self
     {
         $this->id = $id;
+        return $this;
     }
 
     /**
@@ -34,10 +35,9 @@ class Role
     /**
      * @param int $role_name
      */
-    public function setRoleName(int $role_name): void
+    public function setRoleName(int $role_name): self
     {
         $this->role_name = $role_name;
+        return $this;
     }
-
-
 }

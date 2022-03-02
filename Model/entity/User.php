@@ -22,9 +22,10 @@ class User
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(int $id): self
     {
         $this->id = $id;
+        return $this;
     }
 
     /**
@@ -38,9 +39,10 @@ class User
     /**
      * @param string $mail
      */
-    public function setMail(string $mail): void
+    public function setMail(string $mail): self
     {
         $this->mail = $mail;
+        return $this;
     }
 
     /**
@@ -54,9 +56,10 @@ class User
     /**
      * @param string $firstname
      */
-    public function setFirstname(string $firstname): void
+    public function setFirstname(string $firstname): self
     {
         $this->firstname = $firstname;
+        return $this;
     }
 
     /**
@@ -70,9 +73,10 @@ class User
     /**
      * @param string $lastname
      */
-    public function setLastname(string $lastname): void
+    public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
+        return $this;
     }
 
     /**
@@ -86,9 +90,10 @@ class User
     /**
      * @param string $password
      */
-    public function setPassword(string $password): void
+    public function setPassword(string $password): self
     {
         $this->password = $password;
+        return $this;
     }
 
     /**
@@ -102,10 +107,10 @@ class User
     /**
      * @param int $age
      */
-    public function setAge(int $age): void
+    public function setAge(int $age): self
     {
         $this->age = $age;
+        return $this;
     }
-
 
 }

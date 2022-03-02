@@ -12,3 +12,4 @@ require 'Model/manager/Role_manager.php';
 require 'Model/manager/UserRoleManager.php';
 
 require 'Model/DB.php';
+

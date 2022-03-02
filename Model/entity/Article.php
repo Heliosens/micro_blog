@@ -22,9 +22,10 @@ class Article
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(int $id): self
     {
         $this->id = $id;
+        return $this;
     }
 
     /**
@@ -38,9 +39,10 @@ class Article
     /**
      * @param string $title
      */
-    public function setTitle(string $title): void
+    public function setTitle(string $title): self
     {
         $this->title = $title;
+        return $this;
     }
 
     /**
@@ -54,9 +56,10 @@ class Article
     /**
      * @param string $content
      */
-    public function setContent(string $content): void
+    public function setContent(string $content): self
     {
         $this->content = $content;
+        return $this;
     }
 
     /**
@@ -70,9 +73,10 @@ class Article
     /**
      * @param string $date_add
      */
-    public function setDateAdd(string $date_add): void
+    public function setDateAdd(string $date_add): self
     {
         $this->date_add = $date_add;
+        return $this;
     }
 
     /**
@@ -86,9 +90,10 @@ class Article
     /**
      * @param string $date_update
      */
-    public function setDateUpdate(string $date_update): void
+    public function setDateUpdate(string $date_update): self
     {
         $this->date_update = $date_update;
+        return $this;
     }
 
     /**
@@ -102,12 +107,9 @@ class Article
     /**
      * @param User $author
      */
-    public function setAuthor(User $author): void
+    public function setAuthor(User $author): self
     {
         $this->author = $author;
+        return $this;
     }
-
-
-
-
 }
