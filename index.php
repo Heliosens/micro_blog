@@ -1,18 +1,14 @@
 <?php
 
-require 'entity/User.php';
-require 'entity/Role.php';
-require 'entity/Article.php';
-require 'entity/Comment.php';
+require 'Model/entity/User.php';
+require 'Model/entity/Role.php';
+require 'Model/entity/Article.php';
+require 'Model/entity/Comment.php';
 
-require 'manager/UserManager.php';
-require 'manager/Com_Manager.php';
-require 'manager/Article_Manager.php';
-require 'manager/Role_manager.php';
-require 'manager/UserRoleManager.php';
+require 'Model/manager/UserManager.php';
+require 'Model/manager/Com_Manager.php';
+require 'Model/manager/Article_Manager.php';
+require 'Model/manager/Role_manager.php';
+require 'Model/manager/UserRoleManager.php';
 
-require 'DB.php';
-
-$pdo = new DB();
-$db = $pdo->conn();
-
+require 'Model/DB.php';

@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Model\entity;
 
 class Article
 {
@@ -8,7 +9,7 @@ class Article
     private string $content;
     private string $date_add;
     private string $date_update;
-    private string $user_fk;
+    private User $author;
 
     /**
      * @return int
@@ -91,20 +92,22 @@ class Article
     }
 
     /**
-     * @return string
+     * @return User
      */
-    public function getUserFk(): string
+    public function getAuthor(): User
     {
-        return $this->user_fk;
+        return $this->author;
     }
 
     /**
-     * @param string $user_fk
+     * @param User $author
      */
-    public function setUserFk(string $user_fk): void
+    public function setAuthor(User $author): void
     {
-        $this->user_fk = $user_fk;
+        $this->author = $author;
     }
+
+
 
 
 }
