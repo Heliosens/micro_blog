@@ -12,7 +12,7 @@ class DB
         $this->setServer('localhost');
         $this->setUser('root');
         $this->setPassword('');
-        $this->setDbName('');
+        $this->setDbName('micro_blog');
     }
 
     /**

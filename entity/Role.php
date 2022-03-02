@@ -4,8 +4,7 @@
 class Role
 {
     private int $id;
-    private int $role_fk;
-    private int $user_fk;
+    private int $role_name;
 
     /**
      * @return int
@@ -26,33 +25,17 @@ class Role
     /**
      * @return int
      */
-    public function getRoleFk(): int
+    public function getRoleName(): int
     {
-        return $this->role_fk;
+        return $this->role_name;
     }
 
     /**
-     * @param int $role_fk
+     * @param int $role_name
      */
-    public function setRoleFk(int $role_fk): void
+    public function setRoleName(int $role_name): void
     {
-        $this->role_fk = $role_fk;
-    }
-
-    /**
-     * @return int
-     */
-    public function getUserFk(): int
-    {
-        return $this->user_fk;
-    }
-
-    /**
-     * @param int $user_fk
-     */
-    public function setUserFk(int $user_fk): void
-    {
-        $this->user_fk = $user_fk;
+        $this->role_name = $role_name;
     }
 
 

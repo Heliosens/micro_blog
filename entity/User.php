@@ -4,12 +4,11 @@
 class User
 {
     private int $id;
-    private string $name;
-    private string $surname;
     private string $mail;
-    private string $pseudo;
+    private string $firstname;
+    private string $lastname;
     private string $password;
-    private int $role_fk;
+    private int $age;
 
     /**
      * @return int
@@ -25,38 +24,6 @@ class User
     public function setId(int $id): void
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param string $name
-     */
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSurname(): string
-    {
-        return $this->surname;
-    }
-
-    /**
-     * @param string $surname
-     */
-    public function setSurname(string $surname): void
-    {
-        $this->surname = $surname;
     }
 
     /**
@@ -78,17 +45,33 @@ class User
     /**
      * @return string
      */
-    public function getPseudo(): string
+    public function getFirstname(): string
     {
-        return $this->pseudo;
+        return $this->firstname;
     }
 
     /**
-     * @param string $pseudo
+     * @param string $firstname
      */
-    public function setPseudo(string $pseudo): void
+    public function setFirstname(string $firstname): void
     {
-        $this->pseudo = $pseudo;
+        $this->firstname = $firstname;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastname(): string
+    {
+        return $this->lastname;
+    }
+
+    /**
+     * @param string $lastname
+     */
+    public function setLastname(string $lastname): void
+    {
+        $this->lastname = $lastname;
     }
 
     /**
@@ -110,17 +93,17 @@ class User
     /**
      * @return int
      */
-    public function getRoleFk(): int
+    public function getAge(): int
     {
-        return $this->role_fk;
+        return $this->age;
     }
 
     /**
-     * @param int $role_fk
+     * @param int $age
      */
-    public function setRoleFk(int $role_fk): void
+    public function setAge(int $age): void
     {
-        $this->role_fk = $role_fk;
+        $this->age = $age;
     }
 
 
