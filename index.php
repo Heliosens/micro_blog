@@ -19,42 +19,45 @@ $art = new \App\Model\manager\Article_Manager();
 $rol = new \App\Model\manager\role_manager();
 $usRol = new \App\Model\manager\UserRoleManager();
 
-echo 'Utilisateurs';
+
 echo '<pre>';
+
+echo 'Utilisateurs<br>';
 print_r($us->findAll());
-echo '</pre>';
 
 echo '<br><br>';
 
-echo 'Commentaire de l\'art 1';
-echo '<pre>';
+echo 'Commentaire de l\'art 1<br>';
+
+echo '<br><br>';
+
 print_r($com->comByArtId(1));
-echo '</pre>';
+
 
 echo '<br><br>';
 
-echo 'Articles';
-echo '<pre>';
+echo 'Articles<br>';
+
 print_r($art->findAll());
-echo '</pre>';
+
 
 echo '<br><br>';
 
 echo 'Roles';
-echo '<pre>';
+
 print_r($rol->findAllRole());
-echo '</pre>';
+
 
 echo '<br><br>';
 
-echo 'Utilisateur id = 1';
-echo '<pre>';
+echo 'Utilisateur id = 1<br>';
+
 print_r($us->getUserById(1));
-echo '</pre>';
+
 
 echo '<br><br>';
 
-echo 'Utilisateur role = 3';
-echo '<pre>';
+echo 'Utilisateur role = 3<br>';
+
 print_r($usRol->getUserByRoleId(3));
 echo '</pre>';
