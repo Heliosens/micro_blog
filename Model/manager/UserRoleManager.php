@@ -3,6 +3,7 @@
 namespace App\Model\manager;
 
 use App\Model\DB;
+use App\Model\entity\Role;
 use App\Model\entity\User;
 
 class UserRoleManager
@@ -25,5 +26,21 @@ class UserRoleManager
             }
         }
         return $users;
+    }
+
+    public function getRoleByUserId (int $userId) : array
+    {
+        $roles = [];
+        $query = DB::getPDO()->query("
+            SELECT * FROM role WHERE id IN (SELECT role_fk FROM user_role WHERE user_fk = $userId)
+            ");
+        if($query){
+            foreach ($query->fetchAll() as $data){
+                $roles[] = (new Role())
+                    ->setId();
+
+            }
+        }
+        return $roles;
     }
 }

@@ -5,7 +5,7 @@ namespace App\Model\entity;
 class Role
 {
     private ?int $id;
-    private string $role_name;
+    private ?string $role_name;
 
     /**
      * @return int
