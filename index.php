@@ -14,7 +14,6 @@ require 'Model/manager/Role_manager.php';
 require 'Model/manager/UserRoleManager.php';
 
 $art = new \App\Model\manager\Article_Manager();
-$com = new \App\Model\manager\Com_Manager();
 $rol = new \App\Model\manager\role_manager();
 $us = new \App\Model\manager\UserManager();
 $usRol = new \App\Model\manager\UserRoleManager();
@@ -25,13 +24,13 @@ print_r($art->findAll());
 echo '</pre>';
 
 echo '<br><br>';
-echo 'Commentaires';
+echo 'Utilisateurs';
 echo '<pre>';
-print_r($com->findAllCom());
+print_r($us->findAll());
 echo '</pre>';
 
 echo '<br><br>';
-echo 'Role';
+echo 'Roles';
 echo '<pre>';
 print_r($rol->findAllRole());
 echo '</pre>';
