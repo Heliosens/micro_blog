@@ -4,7 +4,7 @@ namespace App\Model\entity;
 
 class Role
 {
-    private int $id;
+    private ?int $id;
     private string $role_name;
 
     /**

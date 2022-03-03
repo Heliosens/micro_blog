@@ -4,7 +4,7 @@ namespace App\Model\entity;
 
 class User
 {
-    private int $id;
+    private ?int $id;
     private string $mail;
     private string $firstname;
     private string $lastname;

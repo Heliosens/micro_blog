@@ -6,7 +6,7 @@ use DateTime;
 
 class Article
 {
-    private int $id;
+    private ?int $id;
     private string $title;
     private string $content;
     private DateTime $date_add;

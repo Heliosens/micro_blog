@@ -4,7 +4,7 @@ namespace App\Model\entity;
 
 class Comment
 {
-    private int $id;
+    private ?int $id;
     private string $content;
     private User $author;
     private Article $article;
