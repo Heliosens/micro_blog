@@ -14,7 +14,7 @@ class UserRoleManager
             ");
         if($query){
             foreach ($query->fetchAll() as $user){
-                $users = (new User())
+                $users[] = (new User())
                     ->setId($user['id'])
                     ->setMail($user['email'])
                     ->setFirstname($user['firstname'])

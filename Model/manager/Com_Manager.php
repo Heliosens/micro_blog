@@ -5,7 +5,7 @@ namespace App\Model\manager;
 use App\Model\DB;
 use App\Model\entity\Comment;
 
-class com_Manager
+class Com_Manager
 {
     public function findAllCom () : array
     {
@@ -16,7 +16,7 @@ class com_Manager
             $artManager = new Article_Manager();
 
             foreach ($query->fetchAll() as $comData){
-                $comments = (new Comment())
+                $comments[] = (new Comment())
                     ->setId($comData['id'])
                     ->setAuthor($userManager->getUserById($comData['user_fk']))
                     ->setContent($comData['content'])

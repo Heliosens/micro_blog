@@ -5,7 +5,7 @@ namespace App\Model\manager;
 use App\Model\DB;
 use App\Model\entity\Role;
 
-class role_manager
+class Role_manager
 {
     public function findAllRole () : array
     {

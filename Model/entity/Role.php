@@ -5,7 +5,7 @@ namespace App\Model\entity;
 class Role
 {
     private int $id;
-    private int $role_name;
+    private string $role_name;
 
     /**
      * @return int
@@ -25,17 +25,17 @@ class Role
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRoleName(): int
+    public function getRoleName(): string
     {
         return $this->role_name;
     }
 
     /**
-     * @param int $role_name
+     * @param string $role_name
      */
-    public function setRoleName(int $role_name): self
+    public function setRoleName(string $role_name): self
     {
         $this->role_name = $role_name;
         return $this;
