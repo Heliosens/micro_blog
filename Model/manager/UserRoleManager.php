@@ -37,8 +37,9 @@ class UserRoleManager
         if($query){
             foreach ($query->fetchAll() as $data){
                 $roles[] = (new Role())
-                    ->setId();
-
+                    ->setId($data['id'])
+                    ->setRoleName($data['role_name'])
+                    ;
             }
         }
         return $roles;
